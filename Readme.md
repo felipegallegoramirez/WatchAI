@@ -1,7 +1,7 @@
 # App Web Hogar Colombia
 
 <p align="center">
-  <img src="https://github.com/felipegallegoramirez/WatchAI/blob/main/misc/logo.svg">
+  <img style="width: 450px;" src="https://github.com/felipegallegoramirez/WatchAI/blob/main/misc/logo.svg">
     <br>    
 </p>
 
