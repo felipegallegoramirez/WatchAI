@@ -43,4 +43,13 @@ export class VisualizeComponent implements OnInit {
     })
   }
 
+  // TODO: Cambiar caracteristica visualizada 
+  next(position:number){
+    let elements = document.getElementsByClassName("right__item")
+    for (let i = 0;i<elements.length;i++){
+      elements[i].classList.add("ocult")
+    }
+    elements[position].classList.remove("ocult")
+  }
+
 }
