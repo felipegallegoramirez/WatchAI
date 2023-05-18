@@ -1,0 +1,45 @@
+<div class="content">
+    <h1 id="tit"></h1>
+    <div class="inputs">
+    <div class="preinput ">
+        <div class="input">
+            <input placeholder="Enter your email address" id="email" type="text">
+            <button  (click)="email()"></button>
+        </div>
+    </div>
+    <div class="preinput oculto">
+        <div class="input">
+            <input placeholder="Enter your password" id="password" type="password">
+            <button (click)="register()"></button>
+            <p (click)="recuperar()" *ngIf="exist">Recuperar contraseña</p>
+        </div>
+    </div>
+
+    <div class="preinput oculto">
+        <div class="input">
+            <input placeholder="Enter the title of the video" id="title" type="text">
+            <button (click)="title()"></button>
+        </div>
+    </div>
+
+    <div class="preinput oculto">
+        <div class="input">
+            <input placeholder="Load File" id="file"type="file" accept="video/mp4,video/mkv, video/x-m4v,video/*">
+            <button (click)="video()"></button>
+        </div>
+    </div>
+
+    <div class="preinput oculto">
+        <div class="loader" id="loader">Loading...</div>
+    </div>
+
+
+
+
+    </div>
+</div>
+<div class="waves">
+    <img src="../../../assets/wavec1.svg" alt="">
+    <img src="../../../assets/wavec2.svg" alt="">
+    <img src="../../../assets/wavec3.svg" alt="">
+</div>

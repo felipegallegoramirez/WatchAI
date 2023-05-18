@@ -1,0 +1,51 @@
+
+
+
+<div class="contains">
+    <div class="title">
+        <h1>{{video.title}}</h1>
+        <h1>Calificacion: {{video.final_grading}}</h1>
+    </div>
+
+    <div class="central">
+        <div class="sup">
+            <div class="left">
+                <video class="video" [src]="linkvideo"  poster="posterimage.jpg" controls></video>
+            </div>
+
+            <div class="right">
+                <div class="right__item--sumarize">
+                    <h3>Resumen</h3>
+                    <p>{{video.summary}}</p>
+                </div>
+                <div class="right__item " (click)=next(0)>
+                    <h3>Temas</h3>
+                    <p>{{video.topics}}</p>
+                </div>
+                <div class="right__item ocult" (click)=next(1)>
+                    <h3>Conectores</h3>
+                    <p>{{video.connectors}}</p>
+                </div>
+                <div class="right__item ocult" (click)=next(2)>
+                    <h3>Preguntas</h3>
+                    <p>{{video.questions}}</p>
+                </div>
+                <div class="right__item ocult" (click)=next(3)>
+                    <h3>Critica</h3>
+                    <p>{{video.critique}}</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="bottom">
+            <h3>Transcripcion</h3>
+            <p>{{video.transcription}}</p>
+        </div>
+    </div>
+    <div class="delete">
+        <button (click)="delete()">Eliminar Video 😓</button>
+    </div>
+</div>
+
+  

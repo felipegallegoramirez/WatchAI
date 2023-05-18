@@ -1,0 +1,9 @@
+<div class="logo"><img src="../assets/logo.svg" (click)="ocult()"></div>
+<nav id="nav" class="nav ocult" (click)="ocult()">
+    <img src="../assets/logo.svg" routerLink="/landing">
+    <h3 routerLink="/porfile">Perfil</h3>
+    <h3 routerLink="/upload">Subir</h3>
+    <h3 routerLink="/list">Videos</h3>
+</nav>
+
+<router-outlet><!--Aca se muestra las paginas--></router-outlet>

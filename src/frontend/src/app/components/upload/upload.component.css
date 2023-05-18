@@ -1,0 +1,201 @@
+.content{
+    margin-top: 150px;
+    width: 100%;
+}
+
+.content>*{
+    width: max-content;
+}
+.content>h1{
+    font-size: 96px;
+    color: var(--b);
+    margin: 0px auto;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+    animation-name: stick;
+    min-height: 112px;
+}
+@keyframes stick {
+    0% {
+        border-right: 4px solid var(--b);
+    }
+    49% {
+        border-right: 4px solid var(--b);
+    }
+    50% {
+        border-right: 4px solid var(--w);
+    }
+    100% {
+        border-right: 4px solid var(--w);
+    }
+  }
+
+
+.input{
+    width: 1000px;
+}
+
+.input>input {
+    margin: 8px 50px 0px 60px;
+    width: 750px;
+    border-radius: 200px;
+    height: 50px;
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 80px 5px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    padding: 0px 30px;
+
+  }
+  .input input:focus {
+    outline: 0px solid var(--p1);
+  }
+
+  .input>button{
+    width: 50px ;
+    height: 50px;
+    border-radius: 200px;
+    color: var(--p4);
+    background-color: var(--p4);
+    border: 1px solid var(--w);
+  }
+
+
+
+  .waves{
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    height: 200px;
+}
+
+.waves >img{
+    width: 5000px;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.waves>img:nth-child(1){
+    animation-duration: 10s;
+    animation-name: wave;
+}
+.waves>img:nth-child(2){
+    animation-duration: 8s;
+    animation-name: wave;
+    animation-direction: alternate-reverse;
+}
+.waves>img:nth-child(3){
+    animation-duration: 12s;
+    animation-delay: 2s;
+    animation-name: wave;
+}
+
+@keyframes wave {
+    from {
+      left: -1200px;
+    }
+    to {
+       left: calc(100vw - 5000px + 1400px);
+    }
+  }
+
+
+
+.inputs{
+    display: inline-block;
+}
+
+.input>p{
+    width: 100%;
+    text-align: center;
+}
+
+.preinput{
+    visibility: visible;
+    position: absolute;
+    width: 1000px;
+    overflow-x: hidden;
+    margin: 150px calc((100vw - 1000px)/2);
+    padding: 80px 0px;
+    box-sizing: border-box;
+    transition: 2s;
+}
+
+.preinput *{
+    transition: 2s;
+}
+
+.oculto input{
+    width: 0px;
+    transition: 1.5s;
+}
+
+.oculto{
+    visibility: hidden;
+    width: 250px;
+    transition: 2s;
+}
+
+button:hover{
+    cursor: pointer;
+  }
+
+
+
+  /* !Cargando */
+  .loader:before,
+  .loader:after,
+  .loader {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+  }
+  .loader {
+    margin: 0px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation-delay: 0.16s;
+    animation-delay: 0.16s;
+  }
+  .loader:before {
+    left: -3.5em;
+  }
+  .loader:after {
+    left: 3.5em;
+    -webkit-animation-delay: 0.32s;
+    animation-delay: 0.32s;
+  }
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  @-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em var(--p1);
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0 var(--p1);
+    }
+  }
+  @keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em var(--p1);
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0 var(--p1);
+    }
+  }

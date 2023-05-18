@@ -1,0 +1,109 @@
+.general{
+    background: linear-gradient(116.82deg, #C215EB 0%, #154FEB 100%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.content{
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content>div{
+    margin-top: 150px ;
+    display: inline-block;
+}
+
+.left{
+    width: 70%;
+    max-width: 1000px;
+}
+.right{
+    width: 29%;
+    max-width: 300px;
+}
+
+
+
+.left__title h1{
+position: absolute;
+font-size: 150px;
+color: rgba(228, 228, 228, 0.2);
+margin: -100px 0px;
+font-weight: 900;
+}
+.left__title h2{
+    font-size: 64px;
+    color:var(--w);
+    font-weight: 900;
+}
+
+.letf__text{
+    max-width: 700px;
+    width: 70%;
+    font-weight: 500;
+}
+
+.letf__text>button{
+margin-top: 30px;
+font-size: 24px;
+background-color: rgba(255, 255, 255, 0.5);
+color: var(--w);
+width: 185px;
+height: 53px;
+border: 2px solid rgba(255, 255, 255, 0.5);
+border-radius: 200px;
+font-weight: 600;
+}
+
+p{
+    color:var(--w)
+}
+.left__me{
+    margin-top: 100px;
+}
+
+.waves{
+    overflow: hidden;
+}
+
+.waves >img{
+    width: 5000px;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.letf__text>button:hover{
+    cursor: pointer;
+}
+
+.waves>img:nth-child(1){
+    animation-duration: 10s;
+    animation-name: wave;
+}
+.waves>img:nth-child(2){
+    animation-duration: 8s;
+    animation-name: wave;
+    animation-direction: alternate-reverse;
+}
+.waves>img:nth-child(3){
+    animation-duration: 12s;
+    animation-name: wave;
+}
+
+@keyframes wave {
+    from {
+      left: -1200px;
+    }
+    to {
+       left: calc(100vw - 5000px + 1200px);
+    }
+  }

@@ -1,0 +1,23 @@
+<div class="inputs">
+
+    <div class="input">
+        <input id="search" type="text">
+        <button (click)="search()"></button>
+    </div>
+
+
+    <div class="contain">
+        <div class="item" *ngFor="let item of items" >
+            <div class="item__div" ><p>
+                {{item.title}}
+            </p></div>
+            <button routerLink="/video/{{item.id}}">ver</button>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>

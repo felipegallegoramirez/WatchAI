@@ -1,0 +1,105 @@
+.content{
+    margin-top: 150px;
+    align-items: center;
+    width: max-content;
+}
+
+.content>*{
+    width: max-content;
+}
+.content>h1{
+    font-size: 96px;
+    color: var(--b);
+    margin: 0px auto;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+    animation-name: stick;
+    min-height: 112px;
+}
+@keyframes stick {
+    0% {
+        border-right: 4px solid var(--b);
+    }
+    49% {
+        border-right: 4px solid var(--b);
+    }
+    50% {
+        border-right: 4px solid var(--w);
+    }
+    100% {
+        border-right: 4px solid var(--w);
+    }
+  }
+
+
+
+.input{
+    width: 1000px;
+    margin: 150px calc((100vw - 1000px)/2);
+}
+
+.input>input {
+    margin: 8px 50px 0px 60px;
+    width: 750px;
+    border-radius: 200px;
+    height: 50px;
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 80px 5px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    padding: 0px 30px;
+  }
+  .input input:focus {
+    outline: 0px solid var(--p1);
+  }
+
+  .input>button{
+    width: 50px ;
+    height: 50px;
+    border-radius: 200px;
+    color: var(--p4);
+    background-color: var(--p4);
+    border: 1px solid var(--w);
+  }
+
+
+
+  .waves{
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    height: 200px;
+}
+
+.waves >img{
+    width: 5000px;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.waves>img:nth-child(1){
+    animation-duration: 10s;
+    animation-name: wave;
+}
+.waves>img:nth-child(2){
+    animation-duration: 8s;
+    animation-name: wave;
+    animation-direction: alternate-reverse;
+}
+.waves>img:nth-child(3){
+    animation-duration: 12s;
+    animation-delay: 2s;
+    animation-name: wave;
+}
+
+@keyframes wave {
+    from {
+      left: -1200px;
+    }
+    to {
+       left: calc(100vw - 5000px + 1400px);
+    }
+  }

@@ -1,0 +1,87 @@
+
+.contains{
+    box-sizing: border-box;
+    padding: 150px 50px;
+    margin: 0px calc((100vw - 1600px)/ 2);
+    width: 100%;
+    max-width: 1600px;
+
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 0px 0px;
+}
+
+
+
+.central div{
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 0px 10px 10px 0px;
+}
+.sup{
+    display: flex;
+}
+
+.left{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.central .right{
+    padding: 0px;
+}
+
+.right>div{
+    padding: 0px 10px;
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 2s;
+
+    overflow: hidden;
+}
+
+.right__item{
+    height: 250px;
+}
+
+.right__item:hover{
+    cursor: pointer;
+}
+
+.sup>.left{
+    display: inline-block;
+}
+
+.ocult{
+    transition: 2s;
+    height: 62px !important;
+    overflow: hidden;
+}
+
+.bottom{
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    padding: 0px 10px;
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+video{
+    border-radius: 20px;
+    width: 640px;
+    height: 650px;
+    background-color: var(--b);
+}
+.delete{
+    text-align: center;
+    width: 100%;
+  }
+  .delete>button{
+    width: 200px ;
+    border-radius: 20px;
+    height: 50px;
+    color: var(--w);
+    background-color: var(--p1);
+  }

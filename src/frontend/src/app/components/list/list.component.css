@@ -1,0 +1,71 @@
+.input{
+    width: 1000px;
+    margin: 150px calc((100vw - 1000px)/2) 0px calc((100vw - 1000px)/2);
+}
+
+.input>input {
+    margin: 8px 50px 0px 60px;
+    width: 750px;
+    border-radius: 200px;
+    height: 50px;
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: 0px 30px;
+  }
+  .input input:focus {
+    outline: 0px solid var(--p1);
+  }
+
+  .input>button{
+    width: 50px ;
+    height: 50px;
+    border-radius: 200px;
+    color: var(--p4);
+    background-color: var(--p4);
+    border: 1px solid var(--w);
+  }
+
+  .contain{
+    margin: 80px calc((100vw - 1000px)/2) 0px;
+    height:  calc((100vh - 400px));
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+    .item{
+        width: 1000px;
+        margin: 20px 0px;
+    }
+    .item>*{
+        display: inline-block;
+    }
+
+  .item>div {
+    margin: 8px 50px 0px 60px;
+    width: 650px;
+    border-radius: 200px;
+    height: 50px;
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: 0px 30px;
+  }
+  .item input:focus {
+    outline: 0px solid var(--p1);
+  }
+
+  .item>button{
+    width: 150px ;
+    height: 50px;
+    border-radius: 200px;
+    font-size: 20px;
+    color: var(--w);
+    background-color: var(--p1);
+    border: 1px solid var(--w);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
