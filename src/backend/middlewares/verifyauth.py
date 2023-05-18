@@ -12,7 +12,6 @@ class VerifyTokenRoute(APIRoute):
             
             # Middleware para verificar el token
             async def verify_token_middleware(request: Request):
-                
 
                 token = request.headers["Authorization"].split(" ")[1]
                 validation_response = validate_token(token, output=False)
@@ -23,6 +22,6 @@ class VerifyTokenRoute(APIRoute):
                 else:
                     return validation_response
 
-            return JSONResponse(content={"message": "Error"}, status_code=400)
+            return verify_token_middleware
         except:
             return JSONResponse(content={"message": "Error"}, status_code=400)

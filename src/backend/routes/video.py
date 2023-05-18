@@ -79,7 +79,8 @@ async def create_upload_file(name,id,file: UploadFile = File(...)):
         response=conn.execute(videos.select().where(videos.c.idowner == id)).fetchall()
 
         return JSONResponse(content={"id":response[len(response)-1].id}, status_code=200)
-    except:
+    except e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
