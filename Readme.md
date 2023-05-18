@@ -48,6 +48,8 @@ En esta fase me enfoque en la delimitacion del problema, alcance y metas a cumpl
 
 - **LINK PAGINA** [Link Vercel](https://watch-ai-6glt.vercel.app/#/landing)
 
+- **LINK Video Presentacion** [Link Loom](https://www.loom.com/share/fb163ae4b57449c3b9b1400a08cb3ef4)
+
 **Si tiene problemas, reintente 2 minutos despues posbible backend inactivo**
 
 ---
@@ -65,7 +67,7 @@ NodeJs y Angular
 ### Backend
 **Requisitos**
 
-NodeJs y Angular
+Python y FastAPI
 
     src/backend
     pip install -r requeriments.txt
