@@ -28,5 +28,6 @@ def chat(trans:str):
         response=openai.ChatCompletion.create(model="gpt-3.5-turbo",messages=[{"role":"user","content":content}])
 
         return response.choices[0].message.content
-    except:
+    except NameError as e:
+        print(e)
         return False

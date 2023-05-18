@@ -7,7 +7,8 @@ def convert_video_to_audio_moviepy(ruta_entrada, name,output_ext="mp3"):
         clip = AudioFileClip(ruta_entrada)
         clip.write_audiofile(f"{name}.{output_ext}")
         clip.close()
-    except:
+    except NameError as e:
+        print(e)
         return False
 
 # TODO: Toma el archivo y comprueba la duracion
@@ -17,5 +18,6 @@ def video_duration(filename):
         duration = clip.duration
         clip.close()
         return duration
-    except:
+    except NameError as e:
+        print(e)
         return False

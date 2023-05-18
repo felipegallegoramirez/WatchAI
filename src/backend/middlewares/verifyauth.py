@@ -23,5 +23,6 @@ class VerifyTokenRoute(APIRoute):
                     return validation_response
 
             return verify_token_middleware
-        except:
+        except NameError as e:
+            print(e)
             return JSONResponse(content={"message": "Error"}, status_code=400)

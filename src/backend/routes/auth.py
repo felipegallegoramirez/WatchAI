@@ -50,15 +50,20 @@ def login(user: User):
             # Encripta la contraseña
             data["password"]=f.encrypt(user.password.encode("utf-8"))
             result = conn.execute(users.insert().values(data))
-            return JSONResponse(content={"code": write_token(info), "id":result.lastrowid}, status_code=200)
+            b=conn.execute(users.select().where(users.c.email==user.email)).first()
+            print(b)
+            return JSONResponse(content={"code": write_token(info), "id":b.id}, status_code=200)
         else:
             #Des Encripta la contraseña para comparar la de la base de datos
-            enc=f.decrypt(a.password.encode("utf-8"))
+            password=a.password[2:]
+            password = bytes.fromhex(password).decode('utf-8')
+            enc=f.decrypt(password.encode("utf-8"))
             if user.password.encode("utf-8") == enc:
                 return JSONResponse(content={"code": write_token(info),"id":a.id}, status_code=200)
             else:
                 return JSONResponse(content={"message": "Contraseña incorrecta"}, status_code=400)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
         
 # Todo: Con el codigo generado en "recover_send", se verifica que si corresponda el de la bd
@@ -76,7 +81,8 @@ def recover(id,recover:Recover):
             .where(users.c.id == b.id)
         )
         return JSONResponse(content={"message": "Exito"}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
@@ -96,7 +102,8 @@ def recover_send(email):
         # Envia el correo con el id y el email
         recoverpassword(data["id"],email)
         return JSONResponse(content={"message": "Exito"}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
@@ -110,5 +117,6 @@ def exist(email:str):
         if(b != None ):
             response=True
         return JSONResponse(content={"exist": response}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)

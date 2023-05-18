@@ -12,6 +12,6 @@ def whisper(route):
         audio_file = open(route, "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file)
         return transcript.text
-    except e:
+    except NameError as e:
         print(e)
         return False

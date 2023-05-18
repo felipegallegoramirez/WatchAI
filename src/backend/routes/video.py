@@ -79,7 +79,7 @@ async def create_upload_file(name,id,file: UploadFile = File(...)):
         response=conn.execute(videos.select().where(videos.c.idowner == id)).fetchall()
 
         return JSONResponse(content={"id":response[len(response)-1].id}, status_code=200)
-    except e:
+    except NameError as e:
         print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
@@ -102,7 +102,8 @@ async def delete_video(id: str):
         # Elimina el audio de la carpeta
         os.remove(f"{os.getcwd()}/audio/{rname}.mp3")
         return JSONResponse(content={"message":"Eliminado"}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
@@ -128,7 +129,8 @@ def get_video(id: str):
             "final_grading":response.final_grading,
             }
         return JSONResponse(content=data, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
@@ -150,5 +152,6 @@ async def read_videos(filename: str):
     try:
         video_path =f"videos/{filename}"
         return FileResponse(video_path)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)

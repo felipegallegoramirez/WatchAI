@@ -28,7 +28,8 @@ def get_user():
         data =  conn.execute(users.select()).fetchall()
         print(data)
         return JSONResponse(content={"message": "Mostrado"}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
@@ -40,7 +41,8 @@ def create_user(id):
         if a is None:
             return JSONResponse(content={"message": "Error"}, status_code=400)
         return JSONResponse(content={"email": a.email}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
 
 
@@ -58,5 +60,6 @@ def update_user(user:User,id):
             .where(users.c.id == id)
         )
         return JSONResponse(content={"message": "Listo"}, status_code=200)
-    except:
+    except NameError as e:
+        print(e)
         return JSONResponse(content={"message": "error"}, status_code=400)
